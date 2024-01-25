@@ -26,8 +26,10 @@ document.addEventListener("DOMContentLoaded",function(){
     s = e.target.scrollTop/(window.innerHeight*4)
     update(s)
   })
-  update(0,true);
-  document.body.classList.add("loaded")
+  setTimeout(function () {
+    update(0,true);
+    document.body.classList.add("loaded")
+  }, 10);
   function update(p,init){
     let _p = Math.round((l.length - 1) * p)
     for(let i in l){
