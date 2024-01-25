@@ -18,20 +18,16 @@ document.addEventListener("DOMContentLoaded",function(){
     document.body.classList.toggle("projectsActive")
     document.body.classList.remove("imprintActive")
     document.body.classList.remove("aboutActive")
-    if(!init){
-      update(s,true);
-      document.body.classList.add("loaded")
-      init = true
-    }
+    update(s);
   })
   let l = [].slice.call(document.getElementById("projects").getElementsByTagName("li"))
   let s = 0
-  let init = false
   document.getElementById("scroller").addEventListener("scroll",function(e){
     s = e.target.scrollTop/(e.target.scrollHeight - e.target.clientHeight)
     update(s)
   })
-
+  update(0,true);
+  document.body.classList.add("loaded")
   function update(p,init){
     let _p = Math.round((l.length - 1) * p)
     for(let i in l){
@@ -41,7 +37,7 @@ document.addEventListener("DOMContentLoaded",function(){
       let m = [].slice.call(l[i].getElementsByTagName("img"))
       v = v.length ? v[0] : false
       m = m.length ? m[0] : false
-      if(v){
+      if(v && !init){
         if( _i == 0){
           v.play()
         }
