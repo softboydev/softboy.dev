@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded",function(){
     }
     if(v && !v.getAttribute("src")){
       v.src = v.getAttribute("data-src")
-      v.poster = v.getAttribute("data-poster")
     }
   }
   function update(p,init){
