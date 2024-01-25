@@ -24,13 +24,12 @@ document.addEventListener("DOMContentLoaded",function(){
   let s = 0
   document.getElementById("scroller").addEventListener("scroll",function(e){
     s = e.target.scrollTop/(e.target.scrollHeight - e.target.clientHeight)
-
     update(s)
   })
   setTimeout(function () {
     update(0,true);
     document.body.classList.add("loaded")
-  }, 10);
+  }, 1000);
   function update(p,init){
     let _p = Math.round((l.length - 1) * p)
     for(let i in l){
