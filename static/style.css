@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Roboto Serif";
-  src: url("./fonts/RobotoSerif-Regular.ttf");
+  font-family: "DejaVu Serif";
+  src: url("./fonts/DejaVuSerif.ttf");
   font-weight: 400;
 }
 
@@ -14,7 +14,7 @@
   color: #000000 !important;
   font-weight: 400;
   user-select: none;
-  font-family: "Roboto Serif",serif;
+  font-family: "DejaVu Serif",serif;
   transition: all 0.2s ease-in-out;
 }
 a{
