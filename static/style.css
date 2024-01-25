@@ -159,7 +159,7 @@ footer{
   transform: translate(-50%,-50%);
   pointer-events: none;
   height: 75vh;
-  box-shadow: 2vh 2vh 5vh rgba(0,0,0,0.05), -2vh -2vh 5vh rgba(0,0,0,0.05), 2vh -2vh 5vh rgba(0,0,0,0.05), -2vh 2vh 5vh rgba(0,0,0,0.05);
+  /* box-shadow: 2vh 2vh 5vh rgba(0,0,0,0.05), -2vh -2vh 5vh rgba(0,0,0,0.05), 2vh -2vh 5vh rgba(0,0,0,0.05), -2vh 2vh 5vh rgba(0,0,0,0.05); */
 }
 #projects li video,
 #projects li img{
