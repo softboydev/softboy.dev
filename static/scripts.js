@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded",function(){
   let l = [].slice.call(document.getElementById("projects").getElementsByTagName("li"))
   let s = 0
   document.getElementById("scroller").addEventListener("scroll",function(e){
-    s = e.target.scrollTop/e.target.scrollTopMax
+    s = e.target.scrollTop/(window.innerHeight*4)
     update(s)
   })
   update(0,true);
