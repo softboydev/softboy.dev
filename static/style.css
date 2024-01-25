@@ -1,22 +1,7 @@
 @font-face {
-  font-family: "Roboto Mono";
-  src: url("./fonts/Roboto_Mono/RobotoMono-Regular.ttf");
+  font-family: "Roboto Serif";
+  src: url("./fonts/RobotoSerif-Regular.ttf");
   font-weight: 400;
-}
-@font-face {
-  font-family: "Roboto Mono";
-  src: url("./fonts/Roboto_Mono/RobotoMono-Medium.ttf");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Roboto Mono";
-  src: url("./fonts/Roboto_Mono/RobotoMono-SemiBold.ttf");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Roboto Mono";
-  src: url("./fonts/Roboto_Mono/RobotoMono-Bold.ttf");
-  font-weight: 700;
 }
 
 *{
@@ -29,7 +14,7 @@
   color: #000000 !important;
   font-weight: 400;
   user-select: none;
-  font-family: serif;
+  font-family: "Roboto Serif",serif;
   transition: all 0.2s ease-in-out;
 }
 a{
@@ -127,7 +112,11 @@ footer{
   left: 0;
   width: 100%;
   height: 100%;
+  display: none;
   transform: scale(0);
+}
+.loaded #projects{
+  display: block;
 }
 .projectsActive #projects{
   transform: scale(100%);
@@ -140,7 +129,7 @@ footer{
   height: 100%;
   overflow: hidden;
   overflow-y: auto;
-    display: none;
+  display: none;
 }
 #scroller div{
   height: 500vh;
@@ -162,7 +151,6 @@ footer{
 }
 #projects li video,
 #projects li img{
-  background: red;
   height: 100%;
   width: auto;
 }
@@ -190,7 +178,7 @@ footer{
 }
 @media  (max-aspect-ratio: 1/1){
   *{
-    font-size: 6.1vw;
+    font-size: 6.1vw !important;
   }
   .desktop{
     display: none;
