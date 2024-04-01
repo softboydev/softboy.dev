@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded",function(){
     update(s);
   })
   let l = [].slice.call(document.getElementById("projects").getElementsByTagName("li"))
+  let a = document.getElementById("scroller")
   let s = 0
   let pre = false
   document.getElementById("scroller").addEventListener("scroll",function(e){
@@ -62,6 +63,7 @@ document.addEventListener("DOMContentLoaded",function(){
       if(v && !init){
         if( _i == 0){
           v.play()
+          a.href = v.getAttribute("data-link")
         }
         else{
           v.pause()
@@ -70,6 +72,7 @@ document.addEventListener("DOMContentLoaded",function(){
       if(init && !fV && v){
         load(l[i])
         fV = true
+
       }
       l[i].style.transform = "translate(" + ((_i * 50)*s - 50) + "%,"  + ((_i * 50)*s - 50)  + "%) scale(" + 100 * s + "%)"
       l[i].style.zIndex = _i < 0 ? 100 + _i : 100 - _i

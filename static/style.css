@@ -56,7 +56,7 @@ footer{
   bottom: 8.5vh;
   transform: translateY(50%);
 }
-#container{
+#container, #projectsclickbox{
   position: fixed;
   top: calc(17vh + 1em);
   left: 17vh;
@@ -140,6 +140,7 @@ footer{
   overflow-y: auto;
   display: none;
   z-index: 1;
+  border: 0 !important;
 }
 #scroller div{
   height: 500vh;
